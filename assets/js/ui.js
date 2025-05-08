@@ -17,22 +17,17 @@ $(function(){
             $("#header").addClass("show");
         }
     });
+    $("#header, #gnb").mouseover(function(){
+        $("#header").addClass("show");
+    });
 
     // gnb
-    $(document).on("mouseenter focus", "#gnb > ul > li", function (e) {
-        if ($(".btnGnbOpen").hasClass("on")) {
-            return false; // 이벤트 중지
-        }
-        $("#gnb").addClass("on");
-
+    $(document).on("mouseenter", "#gnb > ul > li", function () {
+        $("#gnb").removeClass("on");
         $(this).addClass("active").siblings("li").removeClass("active");
         $(this).children("ul").stop().slideDown();
         return false;
     }).on("mouseleave", "#gnb > ul > li", function () {
-        if ($(".btnGnbOpen").hasClass("on")) {
-            return false; // 이벤트 중지
-        }
-
         $("#gnb").removeClass("on");
         $(this).removeClass("active");
         $(this).children("ul").stop().slideUp();
@@ -74,5 +69,13 @@ $(function(){
                 $(this).children("ul").slideUp();
             }
         });
+    });
+
+    $(".langsGroup button").on("click", function () {
+        $(this).parent().toggleClass("active");
+    });
+
+    $(".familyGroup button").on("click", function () {
+        $(this).parent().toggleClass("active");
     });
 });

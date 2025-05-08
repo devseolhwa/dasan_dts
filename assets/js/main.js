@@ -1,21 +1,32 @@
 $(function(){
+    
+    $(".btnViewmore").each(function(){
+        var offset = 3;
+        if($(window).width() <= 1660){
+            offset = 5;
+        }
 
-    /* $(".visualSwiper video").each(function () {
-        const videoElement = this;
+        var $btn = $(this);
+        var btn_width = $btn.outerWidth() - offset;
+        var $bg =  $btn.find('i');
+        var tl = new TimelineMax({paused:true});
+        var dotted_width = $btn.find('i').width();
+        var dotted_left = (btn_width - dotted_width);
         
-        // 동영상 메타데이터 로드 후 실행
-        videoElement.addEventListener("loadedmetadata", function () {
-            const videoDuration = Math.ceil(videoElement.duration * 1000); // ms 단위로 변환
-            const swiperSlide = $(videoElement).closest(".swiper-slide");
-            
-            // 동영상 길이를 data-swiper-autoplay 속성에 설정
-            swiperSlide.attr("data-swiper-autoplay", videoDuration);
-            console.log(videoDuration);
+        tl.to($bg, .3, { width: btn_width+'px', left: '0',force3D: true});
+        tl.to($bg, .3, { width: dotted_width+'px', left: dotted_left+'px',force3D: true});
 
-            videovisual.update();
+        $btn.mouseenter(function(){
+            tl.play();
+
+        }).mouseleave(function(){
+            var currentTime = tl.time();
+            tl.reverse(currentTime);
+
         });
-    }); */
-    let videovisual = new Swiper(".visualSwiper", {
+    });
+  
+    let visualSwiper = new Swiper(".visualSwiper", {
         effect : "fade",
         centeredSlides: true,
         speed: 1000,
@@ -27,32 +38,29 @@ $(function(){
             delay: 5000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: ".pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<button type="button" class="' + className + '">' + '<span class="bar"></span></button>';
-            },		
+        navigation: {
+            nextEl: ".visualControl .swiper-button-next",
+            prevEl: ".visualControl .swiper-button-prev",
         },
-        on: {
-            slideChangeTransitionStart: function(){
-                let num = this.activeIndex + 1;
-                $(".pagination button").removeClass("on");
-                $(".pagination button:nth-child(" + num + ")").addClass("on");
-
-                // 동영상 hold로 주석처리
-                let thisActiveIndex = this.activeIndex;
-                let currentVideo = $(".visualSwiper .swiper-slide").eq(thisActiveIndex).find("video");
-                currentVideo.get(0).currentTime = 0;
-                currentVideo.get(0).play();
+        pagination: {
+            el: ".visualControl .pagination",
+            type: "fraction",
+            formatFractionCurrent: function (number) {
+                return number < 10 ? '0' + number : number;
+            },
+            formatFractionTotal: function (number) {
+                return number < 10 ? '0' + number : number;
             },
         },
     });
-    let firstSet = function () {
-        $(".visualSwiper .swiper-slide").find("video").get(0).play();
-        $(".pagination button").eq(0).addClass("on");
-    };
-    setTimeout(firstSet, 100);
+    $('.swiper-button-autoplay').click(function () {
+        if ($(this).hasClass('on')) {
+            visualSwiper.autoplay.start();
+        } else {
+            visualSwiper.autoplay.stop();
+        }
+        $(this).toggleClass('on');
+    })
 
     // fullpage
     $("#fullpage").fullpage({
@@ -60,18 +68,19 @@ $(function(){
         // fullpage 해제할 브라우저 너비와 높이
         responsiveWidth : 1199,
         responsiveHeight : 800,
-        anchors : ["visual", "slogan", "information", "with"],
-        sectionsColor : ["#FFF", "#FFF", "#FFF", "#FFF"],
+        anchors : ["DASAN DTS", "PRODUCT", "CEO", "ABOUT US"],
+        sectionsColor : ["#000", "#FFF", "#2448E3", "#FFF"],
         css3: true,
         easing: "easeInOutCubic",
         easingcss3: "ease",
         scrollingSpeed: 1000,
         //normalScrollElements: "#section2",
         scrollOverflow: true,
-        navigation : false,
-        //navigationPosition : "left",
-        //navigationTooltips : ["visual", "slogan", "information", "with"],
-        loopBottom : false,
+        navigation : true,
+        navigationPosition : "left",
+        navigationTooltips : ["DASAN DTS", "PRODUCT", "CEO", "ABOUT US"],
+        showActiveTooltip: true,
+        loopBottom : true,
         afterLoad : function (anchorLink, index) {
             if($(".section").hasClass("on")){
                 $(".section.active .aos-init").addClass("aos-animate");
@@ -82,9 +91,11 @@ $(function(){
             if (index == 2 || index == 3 || index == 4 || index == 5) {
                 $("#header").addClass("show");
                 $("#btnTop").addClass("show");
+                $("#fp-nav").addClass("black");
             } else {
                 $("#header").removeClass("show");
                 $("#btnTop").removeClass("show");
+                $("#fp-nav").removeClass("black");
             }
             if (index == 4 || index == 5) {
                 $("#section4").addClass("ani");
@@ -93,54 +104,15 @@ $(function(){
             }
         },   
         onLeave: function (anchorLink, index, direction) {
-            if (direction === "down") {
-                $("#header").addClass("hdn");
-                $(".btnGnbOpen.on").trigger("click");
-            } else if (direction === "up") {
-                $("#header").removeClass("hdn");
-            }
-            if (index == 3) {
-                $({ val : 0 }).animate({ val : 6 }, {
-                    duration: 2000,
-                    step: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum1").text(num);
-                    },
-                    complete: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum1").text(num);
-                    }
-                });
-                $({ val : 0 }).animate({ val : 983 }, {
-                    duration: 2000,
-                    step: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum2").text(num);
-                    },
-                    complete: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum2").text(num);
-                    }
-                });
-                $({ val : 0 }).animate({ val : 9833 }, {
-                    duration: 2000,
-                    step: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum3").text(num);
-                    },
-                    complete: function() {
-                        var num = numberWithCommas(Math.floor(this.val));
-                        $(".countNum3").text(num);
-                    }
-                });
-                function numberWithCommas(x) {
-                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
+            if (index == 5) {
+                $("#fp-nav").hide();
+            } else {
+                $("#fp-nav").show();
             }
         },
     });
 
     $("#btnTop").click(function() {
-        $.fn.fullpage.moveTo("visual");
+        $.fn.fullpage.moveTo("DASAN DTS");
     });
 });
