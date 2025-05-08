@@ -70,6 +70,10 @@ $(function(){
             }
         });
     });
+    $(document).on("mouseenter", ".sitemapBody > ul > li", function () {
+        $(this).addClass("active").siblings("li").removeClass("active");
+        return false;
+    });
 
     $(".langsGroup button").on("click", function () {
         $(this).parent().toggleClass("active");
