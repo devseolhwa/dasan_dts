@@ -1,6 +1,6 @@
-#sub{position: relative;width: 100%;min-height: 500px;overflow: hidden;}
+#sub{position: relative;width: 100%;overflow: hidden;}
 
-#subVisual{position: relative;display: flex;align-items: center;justify-content: center;height: 0;padding-top: 23.65%;box-sizing: border-box;text-align: center;z-index: 50;}
+#subVisual{position: relative;display: flex;align-items: center;justify-content: center;height: 0;padding-top: 30%;box-sizing: border-box;text-align: center;z-index: 50;}
 #subVisual .visualbg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: -10;overflow: hidden;} 
 #subVisual .visualbg:before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;background-position: center;background-size: cover;background-repeat: no-repeat;transform: scale(1.2);transform-origin: center center;animation: scale 2s 0.5s forwards;}
 #subVisual .visualbg.bg01:before{background-image: url(../images/sub/bg_subVisual01.jpg);}
@@ -8,70 +8,84 @@
 #subVisual .visualbg.bg03:before{background-image: url(../images/sub/bg_subVisual03.jpg);}
 #subVisual .visualbg.bg04:before{background-image: url(../images/sub/bg_subVisual04.jpg);}
 #subVisual .visualbg.bg05:before{background-image: url(../images/sub/bg_subVisual05.jpg);}
-#subVisual .visualtext{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);margin-top: 50px;}
-#subVisual .visualtext h2{font-size: 48px;font-size: 2.5vw;color: #FFF;font-weight: 800;line-height: 140%;letter-spacing: -1px;text-align: center;}
+#subVisual .visualtext{position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -10;overflow: hidden;} 
+#subVisual .visualtext .inner{display: flex;align-items: flex-start;justify-content: center;flex-direction: column;max-width: 1440px;width: 100%;height: 100%;margin: 0 auto;padding: 0 20px;box-sizing: border-box;}
+#subVisual .visualtext h2{color: #FFF;font-size: 64px;font-weight: 800;line-height: 100%;letter-spacing: -0.4px;text-align: left;}
+#subVisual .visualtext .location{display: flex;margin-top: 30px;}
+#subVisual .visualtext .location li + li:before{content: "";display: inline-block; width: 3px;height: 3px;background: rgba(255, 255, 255, 0.80);margin: 0 20px;vertical-align: 5px;}
+#subVisual .visualtext .location li a{color: rgba(255, 255, 255, 0.80);font-size: 20px;font-weight: 600;line-height: 150%;letter-spacing: -0.4px;}
+#subVisual .visualtext .location li:last-child a{color: #FFF;}
+.snbList{position: absolute;bottom: 0;width: 100%;height: 60px;background: rgba(255, 255, 255, 0.80);}
+.snbList ul{display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: flex-start;max-width: 1440px;width: 100%;height: 100%;margin: 0 auto;padding: 0 20px;box-sizing: border-box;}
+.snbList ul li{height: 100%;}
+.snbList ul li a{display: flex;height: 100%;padding: 0 50px;color: #000;font-size: 20px;font-weight: 400;line-height: normal;letter-spacing: -0.4px;align-items: center;justify-content: center;}
+.snbList ul li.active a{border-radius: 0px 20px 0px 0px;background: #FFF;color: #2548E3;font-weight: 600;}
+.subContent{position: relative;padding: 150px 0;background: #FFF;min-height: 350px;}
+.subContent .inner{max-width: 1440px;width: 100%;margin: 0 auto;padding: 0 20px;box-sizing: border-box;}
 
-#sub .inner{max-width: 1540px;width: 100%;margin: 0 auto;padding: 0 20px;box-sizing: border-box;}
-.snbList{display: flex;align-items: center;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;max-width: 1500px;width: 100%;margin: 0 auto;border-left: 1px solid #DDD;box-sizing: border-box;}
-.snbList > li{position: relative;width: 250px;border-right: 1px solid #DDD;box-sizing: border-box;}
-.snbList > li.home{width: 52px;height: 52px;}
-.snbList > li.home a{display: flex;align-items: center;justify-content: center;width: 100%;height: 100%;}
-.snbList > li > button{position: relative;display: block;width: 100%;height: 52px;padding: 0 44px 0 20px;box-sizing: border-box;color: #666;font-size: 15px;font-weight: 500;line-height: normal;letter-spacing: -0.6px;text-align: left;}
-.snbList > li > button:after{content: "";position: absolute;top: 50%;right: 20px;transform: translateY(-50%);width: 24px;height: 24px;background-image: url(../images/sub/arrow_down_black.svg);background-size: 100%;background-position: center;background-repeat: no-repeat;transition: all 0.5s;}
-.snbList > li.active > button:after{transform: translateY(-50%) rotate(180deg);}
-.snbList > li > ul{display: none;position: absolute;top: 52px;left: 50%;transform: translateX(-50%);width: 100%;background: #FFF;border: 1px solid #E1E1E1;box-sizing: border-box;text-align: left;z-index: 50;}
-.snbList > li > ul > li + li{border-top: 1px solid #E1E1E1;}
-.snbList > li > ul > li > a{position: relative;display: block;width: 100%;padding: 0 20px; box-sizing: border-box;color: #999;font-size: 15px;font-weight: 400;line-height: 42px;letter-spacing: -0.6px;transition: all 0.5s;}
-.snbList > li > ul > li > a:hover, .snbList > li > ul > li.on > a{background-color: #f0f0f0; color: #006E43;}
-.subContent{position: relative;margin-bottom: 145px;box-sizing: border-box;overflow: hidden;}
+.titleLg{position: relative;color: #000;font-size: 36px;font-weight: 700;line-height: 150%;letter-spacing: -0.4px;}
+.titleLg::before{content: "";position: absolute;left: -2px;top: -2px;width: 10px;height: 10px;background: #2548E3;border-radius: 100%;}
 
-.greetingVisual{position: relative;height: 450px;height: 0;padding-top: 30%;box-sizing: border-box;text-align: center;}
-.greetingVisual img{position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
-.greetingVisual .text{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;}
-.greetingVisual .text p{color: #333;font-size: 45px;font-size: 2.3vw;font-weight: 700;line-height: 150%;letter-spacing: -1px;}
-.greetingVisual .text strong{display: block;color: #006E43;font-size: 50px;font-size: 2.6vw;font-weight: 800;line-height: 150%;letter-spacing: -1px;}
-.greetingContents{margin-top: 70px;color: #333;font-size: 21px;font-weight: 400;line-height: 180%;letter-spacing: -0.6px;word-break: keep-all;text-align: center;}
-.greetingContents .sign{display: block;color: #333;font-size: 20px;font-weight: 500;line-height: normal;letter-spacing: -0.6px;}
-.greetingContents .sign span{display: inline-block;margin-left: 5px;color: #333;font-size: 30px;font-weight: 600;line-height: normal;letter-spacing: -0.6px;font-family: "Noto Serif KR";}
+.tableboardList{width: 100%;margin-top: 45px;border-top: 2px solid #2548E3;border-spacing: 0;border-collapse: separate;box-sizing: border-box;}
+.tableboardList thead tr:last-child > * {border-bottom: 1px solid #CCC;}
+.tableboardList th, .tableboardList td {height: 60px;padding: 15px 10px;color: #333;font-size: 16px;text-align: center;box-sizing: border-box;}
+.tableboardList th {position: relative;background: #FBFDFF;font-weight: 600;letter-spacing: -0.8px;}
+.tableboardList td {border-bottom: 1px solid #CCC;font-weight: 400;letter-spacing: -0.2px;}
+.tableboardList td .noticeLabel{padding: 3px 14px;border-radius: 5px;background: #2548E3;color: #FFF;font-size: 12px;font-weight: 500;line-height: 100%;letter-spacing: -0.2px;text-align: center;}
+.tableboardList td.subject{text-align: left;}
+.tableboardList td.subject a{-webkit-transition: .3s;transition: .3s;}
+.tableboardList td.subject a:hover{color: #000;text-decoration-line: underline;}
+.tableboardList td .fileLabel{display: inline-block;width: 20px;height: 22px;background-image: url(../images/sub/icon_file.svg);background-position: center;background-size: 100%;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;vertical-align: middle;}
+.boardBtnGroup{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: flex-end;margin-top: 30px;}
+.boardBtnGroup button, .boardBtnGroup a{display: inline-flex;justify-content: center;align-items: center;width: 160px;height: 50px;background: #fff;border: 1px solid #27276F;color: #27276F;box-sizing: border-box;font-size: 16px;font-weight: 500;letter-spacing: -1px;transition: .3s;-webkit-transition: .3s;}
+.boardBtnGroup button + button, .boardBtnGroup a + a{margin-left: 10px;}
+.boardBtnGroup button:hover, .boardBtnGroup a:hover{background: #27276F;border: 1px solid #27276F;color: #fff;}
+.paging {margin-top: 100px;text-align: center;font-size: 0;}
+.paging a, .paging strong {display: inline-block;width: 40px;height: 40px;line-height: 40px;margin: 0 3px;border-radius: 100%;box-sizing: border-box;color: #111;font-size: 15px;font-weight: 500;vertical-align: middle;text-decoration: none;z-index: 10;}
+.paging strong {background: #2548E3;color: #FFF;font-weight: 700;}
+.paging #page_prev, .paging #page_next{width: 40px;height: 40px;background-position: center;background-repeat: no-repeat;box-sizing: border-box;overflow: hidden;text-indent: -9999px;white-space: nowrap;}
+.paging #page_prev{background-image: url(../images/sub/arrow_prev.svg);}
+.paging #page_next{background-image: url(../images/sub/arrow_next.svg);}
+
 
 @media screen and (max-width: 1499px){
-    .subContent{margin-bottom: 100px;}
-    .snbList{border-bottom: 1px solid #DDD;}
 
-    .greetingVisual .text p{font-size: 2.8vw;}
-    .greetingVisual .text strong{font-size: 3vw;}
-    .greetingContents{font-size: 18px;}
-    .greetingContents .sign{font-size: 17px;}
-    .greetingContents .sign span{font-size: 26px;}
+    .subContent{}
+
 }
 
 @media screen and (max-width: 1199px){
-    #subVisual{padding-top: 29%;}
-    #subVisual .visualtext{margin-top: 40px;}
-    #subVisual .visualtext h2{font-size: 4vw;}
-    .greetingContents{margin-top: 50px;font-size: 16px;}
+
+    #subVisual{}
+    #subVisual .visualtext h2{}
+
 }
 
 @media screen and (max-width: 767px){
-    .subContent{margin-bottom: 60px;}
-    #subVisual {padding-top: 0;height: 300px;}
-    #subVisual .visualtext h2 {font-size: 32px;}
-    #subVisual .visualbg.bg01:before{background-image: url(../images/sub/bg_subVisual01_m.jpg);}
-    .snbList > li{width: calc(50% - 25px);}
-    .snbList > li:after{height: 26px;}
-    .snbList > li.home{width: 50px;height: 50px;}
-    .snbList > li > button{height: 50px;padding: 0 30px 0 10px;font-size: 13px;}
-    .snbList > li > button:after{right: 10px;width: 20px;height: 20px;}
-    .snbList > li > ul{top: 50px;}
-    .snbList > li > ul > li > a{padding: 0 10px;font-size: 13px;line-height: 36px;}
 
-    .greetingVisual{display: flex;flex-direction: column;flex-wrap: nowrap;align-items: flex-start;height: auto;padding-top: 0;}
-    .greetingVisual img{position: inherit;left: inherit;top: inherit;order: 2;}
-    .greetingVisual .text{position: inherit;top: inherit;left: inherit;transform: translate(0%, 0%);order: 1;text-align: left;}
-    .greetingVisual .text p{padding: 40px 0;font-size: 26px;color: #000;}
-    .greetingContents{margin-top: 40px;font-size: 16px;text-align: left;}
-    .greetingContents .sign{font-size: 16px;}
-    .greetingContents .sign span{font-size: 22px;}
+    #subVisual .visualbg.bg01:before{background-image: url(../images/sub/bg_subVisual01_m.jpg);}
+    #subVisual .visualbg.bg02:before{background-image: url(../images/sub/bg_subVisual02_m.jpg);}
+    #subVisual .visualbg.bg03:before{background-image: url(../images/sub/bg_subVisual03_m.jpg);}
+    #subVisual .visualbg.bg04:before{background-image: url(../images/sub/bg_subVisual04_m.jpg);}
+    #subVisual .visualbg.bg05:before{background-image: url(../images/sub/bg_subVisual05_m.jpg);}
+
+
+    .tableboardList {font-size: 14px;line-height: 1.5;}
+    .tableboardList colgroup,
+    .tableboardList thead{display: none;}
+    .tableboardList .mNone{display: none;}
+    .tableboardList tr{position: relative;display: block;padding: 20px 0;border-bottom: 1px solid #DDD;box-sizing: border-box;}
+    .tableboardList td{display: inline-block;height: auto;padding: 0;border-bottom: 0;}
+    .tableboardList td.td_subject{display: block;}
+    .tableboardList td.date {line-height: 1;border-left: 1px solid #ddd;margin-left: 8px;padding-left: 10px;}
+    .tableboardList td.hits {line-height: 1;border-left: 1px solid #ddd;margin: 0 8px;padding-left: 10px;}
+    .tableboardList td.hits:before{content: "ì¡°íšŒìˆ˜";}
+    .tableboardList td .fileLabel{width: 16px;height: 18px;}
+    .paging{margin-top: 50px;}
+    .paging a, .paging strong{margin: 0 2px;}
+    .paging #page_prev{margin: 0 5px 0 0;padding-left: 20px;}
+    .paging #page_next{margin: 0 0 0 5px;padding-right: 20px;}
+
 }
 
 @keyframes scale{ 

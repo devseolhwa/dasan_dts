@@ -186,7 +186,7 @@ html.fp-enabled,
     top: -6px;
     color: #fff;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    /* font-family: arial, helvetica, sans-serif; */
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
@@ -194,7 +194,6 @@ html.fp-enabled,
     opacity: 0;
     width: 0;
     cursor: pointer;
-    font-family: "Montserrat";
     font-weight: 700;
 }
 #fp-nav ul li:hover .fp-tooltip,

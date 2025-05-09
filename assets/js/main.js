@@ -1,5 +1,6 @@
 $(function(){
     
+    // 버튼 ani
     $(".btnViewmore").each(function(){
         var offset = 3;
         if($(window).width() <= 1660){
@@ -8,13 +9,13 @@ $(function(){
 
         var $btn = $(this);
         var btn_width = $btn.outerWidth() - offset;
-        var $bg =  $btn.find('i');
+        var $bg =  $btn.find("i");
         var tl = new TimelineMax({paused:true});
-        var dotted_width = $btn.find('i').width();
+        var dotted_width = $btn.find("i").width();
         var dotted_left = (btn_width - dotted_width);
         
-        tl.to($bg, .3, { width: btn_width+'px', left: '0',force3D: true});
-        tl.to($bg, .3, { width: dotted_width+'px', left: dotted_left+'px',force3D: true});
+        tl.to($bg, .3, { width: btn_width+"px", left: "0",force3D: true});
+        tl.to($bg, .3, { width: dotted_width+"px", left: dotted_left+"px",force3D: true});
 
         $btn.mouseenter(function(){
             tl.play();
@@ -26,6 +27,7 @@ $(function(){
         });
     });
   
+    // 메인비주얼 슬라이드
     let visualSwiper = new Swiper(".visualSwiper", {
         effect : "fade",
         centeredSlides: true,
@@ -46,20 +48,20 @@ $(function(){
             el: ".visualControl .pagination",
             type: "fraction",
             formatFractionCurrent: function (number) {
-                return number < 10 ? '0' + number : number;
+                return number < 10 ? "0" + number : number;
             },
             formatFractionTotal: function (number) {
-                return number < 10 ? '0' + number : number;
+                return number < 10 ? "0" + number : number;
             },
         },
     });
-    $('.swiper-button-autoplay').click(function () {
-        if ($(this).hasClass('on')) {
+    $(".swiper-button-autoplay").click(function () {
+        if ($(this).hasClass("on")) {
             visualSwiper.autoplay.start();
         } else {
             visualSwiper.autoplay.stop();
         }
-        $(this).toggleClass('on');
+        $(this).toggleClass("on");
     })
 
     // fullpage

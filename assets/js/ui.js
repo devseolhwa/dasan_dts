@@ -34,10 +34,12 @@ $(function(){
         return false;
     });
 
-    // mobile menu
+    // sitemap
     $(document).off("click", ".btnSitemapOpen").on("click", ".btnSitemapOpen", function(e) {
         e.preventDefault();
         $(".sitemapWrap").fadeIn();
+        $(".langsGroup").removeClass("active");
+        $(".swiper-button-autoplay").click();
         $("body").addClass("scrollLock");
         $("body").on("scroll touchmove mousewheel", function(e) {
             e.preventDefault();
@@ -54,32 +56,53 @@ $(function(){
     $(document).off("click", ".btnSitemapClose").on("click", ".btnSitemapClose", function(e) {
         e.preventDefault();
         $(".sitemapWrap").fadeOut();
+        $(".swiper-button-autoplay").click();
         $("body").removeClass("scrollLock");
         $("body").off("scroll touchmove mousewheel");
     });
 
-    $(document).off("click", ".sitemapBody > ul > li > a").on("click", ".sitemapBody > ul > li > a", function(e) {
-        e.preventDefault();
-        $(this).parent("li").toggleClass("on").siblings("li").removeClass("on");
-        $(".sitemapBody > ul > li").each(function () {
-            let onCheck = $(this).is(".on");
-            if (onCheck) {
-                $(this).children("ul").slideDown();
-            } else {
-                $(this).children("ul").slideUp();
-            }
-        });
+    function bindSitemapClickForMobile() {
+        $(document).off("click.sitemap");
+    
+        if (window.innerWidth <= 1199) {
+            $(document).on("click.sitemap", ".sitemapBody > ul > li > a", function (e) {
+                if ($(this).next("ul").length > 0) {
+                    e.preventDefault();
+    
+                    $(this).parent("li").toggleClass("on").siblings("li").removeClass("on");
+    
+                    $(".sitemapBody > ul > li").each(function () {
+                        let onCheck = $(this).hasClass("on");
+                        if (onCheck) {
+                            $(this).children("ul").slideDown();
+                        } else {
+                            $(this).children("ul").slideUp();
+                        }
+                    });
+                }
+            });
+        }
+    }
+    
+    bindSitemapClickForMobile();
+    
+    $(window).on("resize", function () {
+        bindSitemapClickForMobile();
     });
+
     $(document).on("mouseenter", ".sitemapBody > ul > li", function () {
         $(this).addClass("active").siblings("li").removeClass("active");
         return false;
     });
 
+    // 언어선택
     $(".langsGroup button").on("click", function () {
         $(this).parent().toggleClass("active");
     });
 
+    // 패밀리사이트선택
     $(".familyGroup button").on("click", function () {
         $(this).parent().toggleClass("active");
     });
+
 });

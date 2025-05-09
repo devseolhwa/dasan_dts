@@ -3,10 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0020-007E;
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css") format("ttf");
+    font-display: swap;
+    unicode-range: U+AC00-D7A3;
+}
+
 /* reset */
-*{font-family: 'Pretendard', "Montserrat", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+*{font-family: 'Montserrat', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-body {font-size: 15px;color: #555;line-height: 1.5;font-family: 'Pretendard', "Montserrat", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;-webkit-animation: fade 0.7s ease-in-out both;-moz-animation: fade 0.7s ease-in-out both;-ms-animation: fade 0.7s ease-in-out both;-o-animation: fade 0.7s ease-in-out both;animation: fade 0.7s ease-in-out both;}
+body {font-size: 15px;color: #555;line-height: 1.5;-webkit-animation: fade 0.7s ease-in-out both;-moz-animation: fade 0.7s ease-in-out both;-ms-animation: fade 0.7s ease-in-out both;-o-animation: fade 0.7s ease-in-out both;animation: fade 0.7s ease-in-out both;}
 html, body, div, span, iframe, p, dl,  dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, button, select, table, th, td, article, aside, section, figure, figcaption, img {margin: 0;padding: 0;border: 0;}
 iframe {overflow: auto;width: 100%;border: 0;}
 table {width: 100%;border-collapse: separate;border-spacing: 0;font-size: inherit;}
