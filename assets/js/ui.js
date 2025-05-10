@@ -17,7 +17,7 @@ $(function(){
             $("#header").addClass("show");
         }
     });
-    $("#header, #gnb").mouseover(function(){
+    $("#gnb").mouseover(function(){
         $("#header").addClass("show");
     });
 
