@@ -62,7 +62,7 @@ $(function(){
             visualSwiper.autoplay.stop();
         }
         $(this).toggleClass("on");
-    })
+    });
 
     // fullpage
     $("#fullpage").fullpage({

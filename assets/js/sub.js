@@ -1,11 +1,4 @@
 $(function(){
-    
-    // snb
-	/* $(".snbList li button").on("click", function(){
-		$(this).parent("li").toggleClass("active").siblings("li").removeClass("active");
-		$(this).next(".depth02").stop().slideToggle();
-		$(this).parents().siblings("li").find(".depth02").slideUp();
-	}); */
 
     // 토글 기능
     $(".toggleGroup dl").each(function() {
@@ -24,6 +17,31 @@ $(function(){
         } else {
             $parent.addClass("on").children("dd").stop().slideDown();
         }
+    });
+
+    // project 슬라이드
+    let projectSwiper = new Swiper(".projectSwiper", {
+        centeredSlides: true,
+        speed: 1000,
+        loop: false,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".projectControl .swiper-button-next",
+            prevEl: ".projectControl .swiper-button-prev",
+        },
+        pagination: {
+            el: ".projectControl .pagination",
+            clickable: true,
+           renderBullet: function (index, className) {
+                const number = (index + 1).toString().padStart(2, '0');
+                return '<span class="' + className + '">' + number + '</span>';
+            },
+        },
     });
 
 	// 상단으로

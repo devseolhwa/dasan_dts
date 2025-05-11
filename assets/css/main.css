@@ -16,8 +16,8 @@
 .visualSwiper .visualText p.delay{transition-delay: 1.2s;}
 .visualControl{position: absolute;top: 50%;left: 50%;width: 100%;max-width: 170px;height: 100%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);padding-top: 250px;display: flex;flex-direction: row;flex-wrap: nowrap;align-items: center;justify-content: center;gap: 10px;z-index: 99;}
 .visualControl button{position: initial;top: initial;right: initial;left: initial;margin-top: initial;}
-.visualControl .swiper-button-prev{width: 18px;height: 18px;background-image: url(../images/main/icon_left_white.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;}
-.visualControl .swiper-button-next{width: 18px;height: 18px;background-image: url(../images/main/icon_left_white.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;transform: rotate(180deg);}
+.visualControl .swiper-button-prev, .visualControl .swiper-button-next{width: 18px;height: 18px;background-image: url(../images/main/icon_left_white.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;}
+.visualControl .swiper-button-next{transform: rotate(180deg);}
 .visualControl .swiper-button-autoplay{width: 18px;height: 18px;background-image: url(../images/main/icon_stop_white.svg);background-position: center;background-repeat: no-repeat;overflow: hidden;text-indent: -9999px;white-space: nowrap;}
 .visualControl .swiper-button-autoplay.on{background-image: url(../images/main/icon_start_white.svg);}
 .visualControl .pagination{width: auto;color: #FFF;font-size: 18px;font-weight: 700;line-height: normal;letter-spacing: 0.2px;text-align: center;}
