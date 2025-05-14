@@ -82,7 +82,7 @@ $(function(){
         navigationPosition : "left",
         navigationTooltips : ["DASAN DTS", "PRODUCT", "CEO", "ABOUT US"],
         showActiveTooltip: true,
-        loopBottom : true,
+        //loopBottom : true,
         afterLoad : function (anchorLink, index) {
             if($(".section").hasClass("on")){
                 $(".section.active .aos-init").addClass("aos-animate");
@@ -90,7 +90,7 @@ $(function(){
                 $(".section .aos-init").removeClass("aos-animate");
             }
             $(".section.active .aos-init").addClass("aos-animate");
-            if (index == 2 || index == 3 || index == 4 || index == 5) {
+            if (index == 2 || index == 3 || index == 4) {
                 $("#header").addClass("show");
                 $("#btnTop").addClass("show");
                 $("#fp-nav").addClass("black");
@@ -99,17 +99,10 @@ $(function(){
                 $("#btnTop").removeClass("show");
                 $("#fp-nav").removeClass("black");
             }
-            if (index == 4 || index == 5) {
+            if (index == 4) {
                 $("#section4").addClass("ani");
             } else {
                 $("#section4").removeClass("ani");
-            }
-        },   
-        onLeave: function (anchorLink, index, direction) {
-            if (index == 5) {
-                $("#fp-nav").hide();
-            } else {
-                $("#fp-nav").show();
             }
         },
     });

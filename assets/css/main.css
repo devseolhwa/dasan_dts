@@ -2,7 +2,7 @@
 
 #fp-nav.black ul li .fp-tooltip{color: #000;}
 #fp-nav.black ul li a span, .fp-slidesNav.black ul li a span{background: #000;}
-#fp-nav ul li:last-child, .fp-slidesNav ul li:last-child{display: none;}
+/* #fp-nav ul li:last-child, .fp-slidesNav ul li:last-child{display: none;} */
 
 .section{overflow: hidden;}
 .visualWrap{position: relative;}
@@ -72,6 +72,17 @@
 #section4.ani .aboutusGroup .contact{animation: rightAni 0.8s 0.5s both;}
 #section4.ani .aboutusGroup .customer{animation: rightAni 0.8s 1s both;}
 
+.aboutusGroup #footer{opacity: 0;position: relative;width: 75%;height: 100%;padding: 0 70px;border-radius: 0px 100px 0px 0px;background: #F7F7F7;box-sizing: border-box;overflow: hidden;display: flex;justify-content: space-between;align-items: flex-start;flex-direction: row;flex-wrap: wrap;align-content: center;gap: 30px;}
+.aboutusGroup #footer .footerLogo{margin-bottom: 20px;}
+.aboutusGroup #footer .footerAddress ul li strong{color: #333;}
+.aboutusGroup #footer .footerAddress ul li p{color: rgba(0, 0, 0, 0.80);}
+.aboutusGroup #footer .footerCopy{color: rgba(0, 0, 0, 0.70);}
+.aboutusGroup #footer .footerCopy span{color: #000;}
+.aboutusGroup #footer .familyGroup button{background-image: url(../images/layout/icon_down_black.svg);border: 1px solid rgba(0, 0, 0, 0.50);color: #333;}
+.aboutusGroup #footer .familyGroup ul{background-color: rgba(0, 0, 0, 0.9);}
+.aboutusGroup #footer .familyGroup ul li a{color: #FFF;}
+#section4.ani .aboutusGroup #footer{animation: rightAni 0.8s 1s both;}
+
 @media screen and (max-width: 1399px){
 
     .visualSwiper .visualText p{font-size: 50px;}
@@ -99,6 +110,9 @@
     .aboutusGroup .contact h3{font-size: 40px;}
     .aboutusGroup .customer h3{font-size: 40px;}
     .aboutusGroup .btnViewmore{width: 165px;font-size: 18px;}
+
+    .aboutusGroup #footer{width: 70%;}
+    .aboutusGroup #footer .familyGroup ul{top: auto;bottom: 56px;}
 }
 
 @media screen and (max-width: 1199px){
@@ -135,7 +149,7 @@
     #section4 .fp-tableCell{height: auto !important;}
     .aboutusGroup{flex-direction: column;height: auto;padding-top: 200px;}
     .aboutusGroup:before{top: 123px;font-size: 90px;}
-    .aboutusGroup .contact{order: 2;width: 100%;padding: 20% 50px 10%;background-image: url(../images/main/bg_contactUs_m.jpg);}
+    .aboutusGroup .contact{/* order: 2; */width: 100%;padding: 20% 50px 10%;background-image: url(../images/main/bg_contactUs_m.jpg);border-radius: 0 50px 0 0;}
     .aboutusGroup .contact h3{font-size: 35px;}
     .aboutusGroup .customer{order: 1;width: 100%;padding: 50px;border-radius: 0 50px 0 0;}
     .aboutusGroup .customer h3{font-size: 35px;}
@@ -143,6 +157,9 @@
     .aboutusGroup .btnViewmore{width: 140px;padding: 0 20px;font-size: 16px;}
     .aboutusGroup .btnViewmore i{width: 30px;height: 30px;margin-top: -15px;}
     
+    .aboutusGroup #footer{width: 100%;padding: 50px;border-radius: 0;}
+    .aboutusGroup #footer .familyGroup button{margin-top: 0;}
+    .aboutusGroup #footer .familyGroup ul{top: 56px;bottom: auto;}
 }
 
 @media screen and (max-width: 767px){
@@ -179,6 +196,9 @@
     #section4.ani .aboutusGroup .contact{animation: rightAni 1s 1s both;}
     #section4.ani .aboutusGroup .customer{animation: rightAni 0.8s 1s both;}
     
+    .aboutusGroup #footer{padding: 50px 20px;}
+    .aboutusGroup #footer .familyGroup ul{top: auto;bottom: 56px;}
+    #section4.ani .aboutusGroup #footer{animation: rightAni 0.8s 1s both;}
 }
 
 @-webkit-keyframes rightAni {
