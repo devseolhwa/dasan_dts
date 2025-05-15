@@ -188,6 +188,9 @@
 .tabNav{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center;gap: 10px;margin-bottom: 50px;}
 .tabNav a{padding: 10px 30px;border-radius: 5px;border: 1px solid #CCC;background: #FFF;color: #777;font-size: 20px;font-weight: 400;line-height: normal;letter-spacing: -0.4px;}
 .tabNav a.active{font-weight: 600;border-color: #2548E3;background: #2548E3;color: #FFF;}
+.sort{display: flex;justify-content: flex-end;margin-bottom: 30px;}
+.sort select{max-width: 300px;height: 50px;padding: 0 45px 0 20px; background-image: url(../images/sub/icon_arrow_down_black.svg);background-position: 96% center;background-repeat: no-repeat;border: 1px solid #CCC;font-size: 20px;color: #333;transition: .3s;-webkit-transition: .3s;}
+.sort select:focus{outline: 0;border-color: #2548E3;}
 .projectList table{width: 100%;border-top: 2px solid #2548E3;border-spacing: 0;border-collapse: separate;box-sizing: border-box;}
 .projectList thead tr:last-child > * {border-bottom: 1px solid #CCC;}
 .projectList th, .projectList td{height: 60px;padding: 15px 10px;border-left: 1px solid #CCC;box-sizing: border-box;color: #333;font-size: 16px;text-align: center;line-height: 150%;}
@@ -316,6 +319,7 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
     .thumbProjectList .textArea{margin-top: 10px;font-size: 16px;}
     .tabNav{margin-bottom: 40px;}
     .tabNav a{font-size: 18px;}
+    .sort select{max-width: 260px;height: 44px;background-size: 28px auto;font-size: 16px;}
     .projectView .textArea{margin-top: 0;padding-left: 30px;}
     .projectView .textArea strong{padding-bottom: 15px;margin-bottom: 15px;font-size: 20px;}
     .projectView .textArea ul li + li{margin-top: 12px;}
@@ -453,6 +457,8 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
     .thumbProjectList .textArea{font-size: 14px;}
     .tabNav{margin-bottom: 30px;}
     .tabNav a{padding: 6px 15px;font-size: 16px;}
+    .sort{margin-bottom: 20px;}
+    .sort select{max-width: 200px;height: 40px;padding: 0 35px 0 15px;background-size: 28px auto;font-size: 14px;}
     .projectList th, .projectList td{height: auto;padding: 10px;font-size: 14px;}
 
     .projectView .imgArea{width: 100%;margin-bottom: 20px;}
