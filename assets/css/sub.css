@@ -222,6 +222,23 @@
 height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
 .projectView .textArea ul li span{color: #333;font-size: 16px;font-weight: 400;line-height: 150%;letter-spacing: -0.8px;}
 
+.esgGroup > ul > li{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: space-between;gap: 50px;}
+.esgGroup > ul > li + li{margin-top: 100px;}
+.esgGroup .imgArea{width: calc(50% - 50px);border-radius: 0 0 50px 0;overflow: hidden;}
+.esgGroup .imgArea img{width: 100%;vertical-align: bottom;}
+.esgGroup .textArea{width: calc(50% - 25px);}
+.esgGroup .textArea strong{color: #000;font-size: 26px;font-weight: 700;line-height: 150%;letter-spacing: -0.4px;}
+.esgGroup .textArea ul{margin-top: 20px;}
+.esgGroup .textArea ul > li + li{margin-top: 15px;}
+.esgGroup .textArea ul > li > b{display: block;margin-bottom: 15px;color: #000;font-size: 20px;font-weight: 500;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
+.esgGroup .textArea ul > li > p{color: #333;font-size: 16px;font-weight: 400;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
+.esgGroup > ul > li:nth-child(even) .imgArea{order: 2;}
+.esgGroup > ul > li:nth-child(even) .textArea{order: 1;}
+.markText{position: relative;color: #000;font-size: 36px;font-weight: 600;line-height: 160%;letter-spacing: -0.4px;word-break: keep-all;text-align: center;}
+.markText:before{content: "";position: absolute;left: 200px;top: -20px;width: 67px;height: 52px;background-image: url(../images/sub/icon_mark02.png);background-position: center;background-size: 100%;background-repeat: no-repeat;}
+.markText:after{content: "";position: absolute;right: 100px;bottom: -20px;width: 67px;height: 52px;background-image: url(../images/sub/icon_mark03.png);background-position: center;background-size: 100%;background-repeat: no-repeat;}
+.markText span{display: block;}
+
 @media screen and (max-width: 1499px){
 
     #subVisual{padding-top: 35%;}
@@ -237,7 +254,15 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
 
     .historyItem > .list > li > .date{font-size: 20px;}
     .historyItem > .list > li > .text{margin-top: 0;}
-    
+
+    .esgGroup > ul > li{gap: 40px;}
+    .esgGroup .imgArea{width: calc(40% - 25px);}
+    .esgGroup .textArea{width: calc(60% - 25px);}
+    .esgGroup .textArea ul > li > b{margin-bottom: 5px;}
+    .markText{font-size: 30px;}
+    .markText:before{left: 10%;}
+    .markText:after{bottom: auto;top: -20px;right: 10%;}
+
 }
 
 @media screen and (max-width: 1199px){
@@ -324,6 +349,8 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
     .projectView .textArea strong{padding-bottom: 15px;margin-bottom: 15px;font-size: 20px;}
     .projectView .textArea ul li + li{margin-top: 12px;}
     
+    .markText{font-size: 24px;}
+    .markText:before, .markText:after{width: 50px;height: 42px;}
 }
 
 @media screen and (max-width: 1024px){
@@ -337,6 +364,12 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
 
     .projectList{overflow-x: auto;}
     .projectList table{min-width: 900px;}
+
+    .esgGroup > ul > li + li{margin-top: 50px;}
+    .esgGroup .imgArea{width: 60%;}
+    .esgGroup .textArea{width: 100%;}
+    .esgGroup > ul > li:nth-child(even) .imgArea{order: 1;}
+    .esgGroup > ul > li:nth-child(even) .textArea{order: 2;}
 }
 
 @media screen and (max-width: 767px){
@@ -471,7 +504,19 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
     .projectView .textArea ul li + li{margin-top: 5px;}
     .projectView .textArea ul li b{font-size: 14px;}
     .projectView .textArea ul li span{font-size: 14px;}
-    
+
+    .esgGroup > ul > li{gap: 20px;}
+    .esgGroup > ul > li + li{margin-top: 30px;}
+    .esgGroup .imgArea{width: 100%;border-radius: 0 0 30px 0;}
+    .esgGroup .textArea strong{font-size: 20px;}
+    .esgGroup .textArea ul{margin-top: 10px;}
+    .esgGroup .textArea ul > li > b{font-size: 16px;}
+    .esgGroup .textArea ul > li > p{font-size: 14px;}
+
+    .markText{font-size: 18px;}
+    .markText:before, .markText:after{width: 30px;height: 28px;}
+    .markText:before{top: -35px;left: 0;}
+    .markText:after{top: auto;bottom: -35px;right: 0;}
 }
 
 @keyframes scale{ 

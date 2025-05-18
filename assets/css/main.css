@@ -32,12 +32,13 @@
 .productGroup .titleGroup strong{display: block;color: #000;font-size: 50px;font-weight: 700;line-height: normal;letter-spacing: -0.4px;}
 .productGroup .titleGroup p{margin-top: 20px;color: #222;font-size: 26px;font-weight: 400;line-height: normal;word-break: keep-all;}
 .productGroup ul{width: 75%;display: flex;flex-direction: row;flex-wrap: wrap;}
-.productGroup ul li{width: 50%;padding: 150px 20px 0 50px;box-sizing: border-box;background-position: center top;background-size: cover;background-repeat: no-repeat;}
+.productGroup ul li{width: 33.33%;padding: 150px 30px 0 50px;box-sizing: border-box;background-position: center top;background-size: cover;background-repeat: no-repeat;}
 .productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc.jpg);border-radius: 0 0 0 100px;}
 .productGroup ul li:nth-child(2){background-image: url(../images/main/bg_acc.jpg);}
-.productGroup ul li p.lg{color: #000;font-size: 40px;font-weight: 700;line-height: normal;}
-.productGroup ul li p.md{margin-top: 20px;color: #000;font-size: 30px;font-weight: 400;line-height: 150%;word-break: keep-all;}
-.productGroup ul li p.sm{margin-top: 20px;color: #000;font-size: 20px;font-weight: 400;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
+.productGroup ul li:nth-child(3){background-image: url(../images/main/bg_Radiator.jpg);}
+.productGroup ul li p.lg{color: #000;font-size: 34px;font-weight: 700;line-height: normal;}
+.productGroup ul li p.md{margin-top: 10px;color: #000;font-size: 25px;font-weight: 400;line-height: 150%;word-break: keep-all;}
+.productGroup ul li p.sm{margin-top: 10px;color: #000;font-size: 18px;font-weight: 400;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
 .productGroup ul li .btnViewmore{position: relative;display: inline-block;margin-top: 33px;padding: 0 25px;box-sizing: border-box;color: #000;font-size: 20px;font-weight: 400;line-height: normal;z-index: 1;}
 .productGroup ul li .btnViewmore i{position: absolute;left: 0;top: 50%;width: 50px;height: 50px;margin-top: -25px;background: rgba(37, 72, 227, 0.50);border-radius: 50px;z-index: -1;}
 .productGroup ul li .btnViewmore:hover i{background: #2548E3;}
@@ -127,9 +128,10 @@
     .productGroup .titleGroup{width: 100%;padding: 50px;}
     .productGroup .titleGroup strong{font-size: 35px;}
     .productGroup ul{width: 100%;}
-    .productGroup ul li{padding: 50px 50px 35%;background-position: center;}
+    .productGroup ul li{padding: 50px 50px 35%;background-position: center bottom;}
     .productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc_m.jpg);border-radius: 50px 0 0 0;}
     .productGroup ul li:nth-child(2){background-image: url(../images/main/bg_acc_m.jpg);}
+    .productGroup ul li:nth-child(3){background-image: url(../images/main/bg_Radiator_m.jpg);}
     .productGroup ul li p.lg{font-size: 24px;}
     .productGroup ul li .btnViewmore{margin-top: 15px;padding: 0 20px;font-size: 16px;}
     .productGroup ul li .btnViewmore i{width: 30px;height: 30px;margin-top: -15px;}
