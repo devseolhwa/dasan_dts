@@ -57,7 +57,7 @@
 
 #section4{position: relative;background: #FFF;overflow: hidden;}
 .aboutusGroup{display: flex;flex-direction: row;flex-wrap: wrap;height: calc(100% - 300px);padding-top: 300px;}
-.aboutusGroup:before{content: "About Us";opacity: 0;position: absolute;left: 20px;top: 150px;color: #F7F7F7;font-size: 180px;font-weight: 700;line-height: 100%;z-index: 0;}
+.aboutusGroup:before{content: "Contact Us";opacity: 0;position: absolute;left: 20px;top: 150px;color: #F7F7F7;font-size: 180px;font-weight: 700;line-height: 100%;z-index: 0;}
 .aboutusGroup .contact{opacity: 0;position: relative;display: flex;flex-direction: column;flex-wrap: wrap;justify-content: flex-end;width: 25%;height: 100%;padding: 0 0 100px 50px;background-image: url(../images/main/bg_contactUs.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;box-sizing: border-box;z-index: 2;}
 .aboutusGroup .contact h3{color: #000;font-size: 50px;font-weight: 700;line-height: normal;}
 .aboutusGroup .customer{opacity: 0;position: relative;width: 75%;height: 100%;padding: 0 70px 100px;border-radius: 0px 100px 0px 0px;background: #F7F7F7;box-sizing: border-box;overflow: hidden;display: flex;flex-direction: column;justify-content: flex-end;align-items: stretch;}
