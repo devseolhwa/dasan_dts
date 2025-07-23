@@ -26,22 +26,26 @@
 .visualSwiper .swiper-slide:not(.swiper-slide-active) img{opacity: 0;}
 .visualSwiper .swiper-slide-active .visualText p{opacity: 1;transform: none;-webkit-transform: none;-moz-transform: none;-ms-transform: none;-o-transform: none;}
 
+/* 20250723 START */
 #section2{position: relative;}
-.productGroup{display: flex;flex-direction: row;flex-wrap: wrap;align-items: stretch;height: 100vh;}
-.productGroup .titleGroup{width: 25%;padding: 150px 20px 0 50px;box-sizing: border-box;}
+.productGroup{display: flex;justify-content: center;align-items: center;flex-direction: column;width: 100%;height: 100vh;padding: 120px 50px 20px;box-sizing: border-box;}
+.productGroup .inner{width: 1500px;max-width: 100%;height: 100%;}
+.productGroup .titleGroup{margin-bottom: 30px;}
 .productGroup .titleGroup strong{display: block;color: #000;font-size: 50px;font-weight: 700;line-height: normal;letter-spacing: -0.4px;}
-.productGroup .titleGroup p{margin-top: 20px;color: #222;font-size: 26px;font-weight: 400;line-height: normal;word-break: keep-all;}
-.productGroup ul{width: 75%;display: flex;flex-direction: row;flex-wrap: wrap;}
-.productGroup ul li{width: 33.33%;padding: 150px 30px 0 50px;box-sizing: border-box;background-position: center top;background-size: cover;background-repeat: no-repeat;}
-.productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc.jpg);border-radius: 0 0 0 100px;}
+.productGroup .titleGroup p{margin-top: 10px;color: #222;font-size: 26px;font-weight: 400;line-height: normal;word-break: keep-all;}
+.productGroup ul{display: flex;flex-direction: row;flex-wrap: wrap;width: 100%;height: calc(100% - 133px);}
+.productGroup ul li{width: 25%;padding: 40px 30px 30px 30px;box-sizing: border-box;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc.jpg);border-radius: 40px 0 0 0;}
 .productGroup ul li:nth-child(2){background-image: url(../images/main/bg_acc.jpg);}
 .productGroup ul li:nth-child(3){background-image: url(../images/main/bg_Radiator.jpg);}
-.productGroup ul li p.lg{color: #000;font-size: 34px;font-weight: 700;line-height: normal;}
-.productGroup ul li p.md{margin-top: 10px;color: #000;font-size: 25px;font-weight: 400;line-height: 150%;word-break: keep-all;}
-.productGroup ul li p.sm{margin-top: 10px;color: #000;font-size: 18px;font-weight: 400;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
-.productGroup ul li .btnViewmore{position: relative;display: inline-block;margin-top: 33px;padding: 0 25px;box-sizing: border-box;color: #000;font-size: 20px;font-weight: 400;line-height: normal;z-index: 1;}
-.productGroup ul li .btnViewmore i{position: absolute;left: 0;top: 50%;width: 50px;height: 50px;margin-top: -25px;background: rgba(37, 72, 227, 0.50);border-radius: 50px;z-index: -1;}
+.productGroup ul li:nth-child(4){background-image: url(../images/main/bg_orc.jpg);border-radius: 0 0 40px 0;}
+.productGroup ul li p.lg{color: #000;font-size: 32px;font-weight: 700;line-height: normal;}
+.productGroup ul li p.md{margin-top: 10px;color: #000;font-size: 20px;font-weight: 400;line-height: 150%;word-break: keep-all;}
+.productGroup ul li p.sm{margin-top: 10px;color: #000;font-size: 14px;font-weight: 400;line-height: 150%;letter-spacing: -0.4px;word-break: keep-all;}
+.productGroup ul li .btnViewmore{position: relative;display: inline-block;margin-top: 15px;padding: 0 15px;box-sizing: border-box;color: #000;font-size: 16px;font-weight: 400;line-height: normal;z-index: 1;}
+.productGroup ul li .btnViewmore i{position: absolute;left: 0;top: 50%;width: 30px;height: 30px;margin-top: -15px;background: rgba(37, 72, 227, 0.50);border-radius: 30px;z-index: -1;}
 .productGroup ul li .btnViewmore:hover i{background: #2548E3;}
+/* 20250723 END */
 
 #section3{position: relative;}
 .ceoGroup{display: flex;flex-direction: row;flex-wrap: wrap;align-items: stretch;height: 100vh;}
@@ -88,15 +92,17 @@
 
     .visualSwiper .visualText p{font-size: 50px;}
 
-    .productGroup .titleGroup{padding: 140px 20px 0 50px;}
+    /* 20250723 START */
+    .productGroup .titleGroup{/* padding: 140px 20px 0 50px; */}
     .productGroup .titleGroup strong{font-size: 40px;}
     .productGroup .titleGroup p{font-size: 20px;}
-    .productGroup ul li{padding: 140px 20px 0 30px;}
-    .productGroup ul li p.lg{font-size: 30px;}
-    .productGroup ul li p.md{font-size: 20px;}
-    .productGroup ul li p.sm{font-size: 16px;}
+    .productGroup ul li{padding: 30px 20px 20px 20px;}
+    .productGroup ul li p.lg{font-size: 28px;}
+    .productGroup ul li p.md{font-size: 18px;}
+    .productGroup ul li p.sm{font-size: 13px;}
     .productGroup ul li p.sm br.tabletHide{display: none !important;}
-    .productGroup ul li .btnViewmore{font-size: 18px;}
+    .productGroup ul li .btnViewmore{/* font-size: 18px; */}
+    /* 20250723 END */
 
     .ceoGroup .imageArea{width: 40%;}
     .ceoGroup .textArea{width: 60%;}
@@ -121,20 +127,22 @@
 
     .visualSwiper .visualText p{font-size: 40px;}
 
+    /* 20250723 START */
     #section2,
     #section2 .fp-tableCell,
     .fp-scrollable{height: auto !important;}
-    .productGroup{height: auto;}
-    .productGroup .titleGroup{width: 100%;padding: 50px;}
+    .productGroup{height: auto;padding: 50px;}
+    .productGroup .titleGroup{width: 100%;/* padding: 50px; */}
     .productGroup .titleGroup strong{font-size: 35px;}
-    .productGroup ul{width: 100%;}
-    .productGroup ul li{padding: 50px 50px 35%;background-position: center bottom;}
-    .productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc_m.jpg);border-radius: 50px 0 0 0;}
+    .productGroup ul li{width: 50%;height: 550px;}
+   /*  .productGroup ul li{padding: 50px 50px 35%;background-position: center bottom;}
+    .productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc_m.jpg);}
     .productGroup ul li:nth-child(2){background-image: url(../images/main/bg_acc_m.jpg);}
     .productGroup ul li:nth-child(3){background-image: url(../images/main/bg_Radiator_m.jpg);}
     .productGroup ul li p.lg{font-size: 24px;}
     .productGroup ul li .btnViewmore{margin-top: 15px;padding: 0 20px;font-size: 16px;}
-    .productGroup ul li .btnViewmore i{width: 30px;height: 30px;margin-top: -15px;}
+    .productGroup ul li .btnViewmore i{width: 30px;height: 30px;margin-top: -15px;} */
+    /* 20250723 EMD */
 
     #section3,
     #section3 .fp-tableCell{height: auto !important;}
@@ -172,12 +180,20 @@
     .visualControl .pagination{font-size: 14px;}
     .visualSwiper .visualBg{height: 100%;min-height: 500px;}
 
-    .productGroup .titleGroup{padding: 50px 20px 30px;}
+    /* 20250723 START */
+    .productGroup{padding: 50px 20px;}
+    .productGroup .titleGroup{/* padding: 50px 20px 30px; */}
     .productGroup .titleGroup strong{font-size: 30px;}
     .productGroup .titleGroup p{margin-top: 10px;font-size: 18px;}
-    .productGroup ul li{width: 100%;padding: 50px 20px 65%;}
-    .productGroup ul li p.md{margin-top: 10px;}
-    .productGroup ul li p.sm{margin-top: 10px;}
+    .productGroup ul li{width: 100%;height: 300px;/* padding: 50px 20px 65%; */}
+    .productGroup ul li:nth-child(1){background-image: url(../images/main/bg_afc_m.jpg);}
+    .productGroup ul li:nth-child(2){background-image: url(../images/main/bg_acc_m.jpg);}
+    .productGroup ul li:nth-child(3){background-image: url(../images/main/bg_Radiator_m.jpg);}
+    .productGroup ul li:nth-child(4){background-image: url(../images/main/bg_orc_m.jpg);}
+    .productGroup ul li p.lg{font-size: 24px;}
+    .productGroup ul li p.md{/* margin-top: 10px; */font-size: 16px;}
+    .productGroup ul li p.sm{display: none;/* margin-top: 10px; */}
+    /* 20250723 END */
 
     .ceoGroup .textArea{padding: 50px 20px 150px;background-size: 100%;background-position: center bottom;}
     .ceoGroup .textArea strong{font-size: 30px;}

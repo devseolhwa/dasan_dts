@@ -238,6 +238,8 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
 .markText:before{content: "";position: absolute;left: 200px;top: -20px;width: 67px;height: 52px;background-image: url(../images/sub/icon_mark02.png);background-position: center;background-size: 100%;background-repeat: no-repeat;}
 .markText:after{content: "";position: absolute;right: 100px;bottom: -20px;width: 67px;height: 52px;background-image: url(../images/sub/icon_mark03.png);background-position: center;background-size: 100%;background-repeat: no-repeat;}
 
+.grayBox{background-color: #FFF;padding: 40px;box-sizing: border-box;color: #111;font-size: 18px;font-weight: 400;line-height: 170%;letter-spacing: -0.4px;word-break: keep-all;text-align: center;box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.05);}/* 20250723 */
+
 @media screen and (max-width: 1499px){
 
     #subVisual{padding-top: 35%;}
@@ -516,6 +518,12 @@ height: 12px;margin: 0 10px;background: #D9D9D9;vertical-align: middle;}
     .markText:before, .markText:after{width: 30px;height: 28px;}
     .markText:before{top: -35px;left: 0;}
     .markText:after{top: auto;bottom: -35px;right: 0;}
+    /* 20250723 START */
+    .markText p{display: contents;}
+
+    .grayBox{padding: 20px;font-size: 14px;}
+    .grayBox p{display: contents;}
+    /* 20250723 END */
 }
 
 @keyframes scale{ 
